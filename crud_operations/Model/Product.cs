@@ -21,6 +21,13 @@ namespace crud_operations.Model
         public string Description { get; set; }
         public System.DateTime ReleaseDate { get; set; }
         public bool IsAvaliable { get; set; }
+         public string IsAvaliableText
+        {
+            get
+            {
+                return IsAvaliable ? "Да" : "Нет";
+            }
+        }
         public string Photo { get; set; }
     
         public virtual Category Category { get; set; }
