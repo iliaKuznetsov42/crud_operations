@@ -1,4 +1,5 @@
-﻿using System;
+﻿using crud_operations.Model;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,6 @@ namespace crud_operations
     /// </summary>
     public partial class App : Application
     {
+        public static TestShopEntities context = new TestShopEntities();
     }
 }

@@ -23,6 +23,23 @@ namespace crud_operations
         public MainWindow()
         {
             InitializeComponent();
+
+            ProductsLv.ItemsSource = App.context.Product.ToList();
+        }
+
+        private void AddProduct_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditPtoductBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveProductBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

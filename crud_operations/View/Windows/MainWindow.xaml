@@ -1,0 +1,46 @@
+﻿<Window x:Class="crud_operations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:crud_operations"
+        mc:Ignorable="d"
+        Title="Товары" MinHeight="720" MinWidth="1280" Width="1600" Height="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+
+        <Button Name="AddProduct" Content="Добавить товар" Click="AddProduct_Click"/>
+        <Button Name="EditPtoductBtn" Content="Изменить товар" Click="EditPtoductBtn_Click" Grid.Column="2"/>
+        <Button Name="RemoveProductBtn" Content="Удалить товар товар" Click="RemoveProductBtn_Click" Grid.Column="4"/>  
+        </Grid>
+        
+        <ListView Name="ProductsLv" Grid.Row="2" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Фото" DisplayMemberBinding="{Binding Photo}"/>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price, StringFormat={}{0 : C0}, ConverterCulture=ru-RU}"/>
+                    <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category.Name}"/>
+                    <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}"/>
+                    <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding ReleaseDate, StringFormat=dd.MM.yyyy}"/>
+                    <GridViewColumn Header="Наличие на складе" DisplayMemberBinding="{Binding IsAvaliable}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+
+    
+</Window>

@@ -62,7 +62,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -70,7 +70,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -133,7 +133,6 @@
   <ItemGroup>
     <Folder Include="AppData\" />
     <Folder Include="View\Pages\" />
-    <Folder Include="View\Windows\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\Model1.Context.tt">
