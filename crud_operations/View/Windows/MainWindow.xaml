@@ -32,7 +32,7 @@
                 <GridView>
                     <GridViewColumn Header="Фото" DisplayMemberBinding="{Binding Photo}"/>
                     <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price, StringFormat={}{0 : C0}, ConverterCulture=ru-RU}"/>
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price, StringFormat={}{0:C0}, ConverterCulture=ru-RU}"/>
                     <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category.Name}"/>
                     <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}"/>
                     <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding ReleaseDate, StringFormat=dd.MM.yyyy}"/>
